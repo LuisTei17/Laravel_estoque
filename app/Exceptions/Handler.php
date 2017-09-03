@@ -5,7 +5,7 @@ namespace estoque\Exceptions;
 use Exception;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
-
+use estoque\app\Http\Controllers;
 class Handler extends ExceptionHandler
 {
     /**
@@ -44,7 +44,8 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
-        return parent::render($request, $exception);
+        
+        return redirect()->action('ProdutoController@lista');
     }
 
     /**
