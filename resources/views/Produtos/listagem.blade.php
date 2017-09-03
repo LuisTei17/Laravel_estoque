@@ -10,7 +10,6 @@
 @else
     <h1>Listagem de produtos</h1>
     <table class="table table-bordered table-striped table-hover">
-        @foreach ($produtos as $produto) 
         <tr>
             <th>Nome</th>
             <th>Valor</th>
@@ -19,6 +18,7 @@
             <th>Ação</th>
             <th>Ação</th>
         </tr>
+        @foreach ($produtos as $produto) 
         <tr class="{{ $produto->quantidade <= 1 ? 'danger' : ''}} ">
             <td> {{ $produto->nome }}</td>
             <td> R$ {{ $produto->valor }}</td>
