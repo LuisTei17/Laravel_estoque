@@ -27,6 +27,9 @@
             <td>
                 <a href="{{action('ProdutoController@remove', $produto->id)}}">Deletar</a>
             </td>
+            <td>
+                <a href="{{action('ProdutoController@novo', $produto->id)}}">Atualizar</a>
+            </td>
         <tr>
         @endForeach
     </table>
