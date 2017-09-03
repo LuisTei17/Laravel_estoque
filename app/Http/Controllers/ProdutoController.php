@@ -18,16 +18,6 @@
             return $produtos;
         }
 
-        public function mostra($id) {
-
-            $resposta = Produto::find($id);
-
-            if(empty($resposta)) {
-                return "Este produto não existe";
-            }
-            $produto = $resposta[0];
-            return view('Produtos/detalhes')->withProduto($produto);
-        }
 
         public function novo() {
             $id = Request::route('id');

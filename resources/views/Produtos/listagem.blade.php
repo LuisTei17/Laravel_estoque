@@ -17,9 +17,6 @@
             <td> {{ $produto->descricao }}</td>
             <td> {{ $produto->quantidade }}</td>
             <td>
-                <a href="/produtos/mostra/<?= $produto->id?>">Visualizar</a>
-            </td>
-            <td>
                 <a href="{{action('ProdutoController@remove', $produto->id)}}">Deletar</a>
             </td>
             <td>

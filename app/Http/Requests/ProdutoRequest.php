@@ -26,13 +26,15 @@ class ProdutoRequest extends FormRequest
         return [
             'nome' => 'required|max:100',
             'descricao' => 'required|max:255',
-            'valor' => 'required|numeric'
+            'valor' => 'required|numeric|max:13'
         ];
     }
 
     public function messages(){
         return [
-            'required' => 'O campo :attribute não pode estar branco'
+            'required' => 'O campo :attribute não pode estar branco',
+            'numeric' => 'O campo :attribute precisa ser um número exemplo: 800.00',
+            'max' => 'O campo :attribute excedeu o número máximo'
         ];
     }
 }
