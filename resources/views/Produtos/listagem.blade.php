@@ -34,8 +34,4 @@
         @endForeach
     </table>
 @endif
-
-<h4>
-    <span class="label label-danger pull-right">Um ou menos itens no estoque</span>
-</h4>
 @stop

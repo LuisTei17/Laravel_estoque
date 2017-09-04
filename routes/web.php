@@ -25,6 +25,19 @@ Route::get('/produtos/remove/{id}', "ProdutoController@remove");
 
 Route::post('/produtos/adiciona', "ProdutoController@adiciona");
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 Route::post('/produtos/editar', "ProdutoController@edita");
 
 Auth::routes();
